@@ -5,6 +5,8 @@
   box-sizing: border-box;
 }
 html {
+  scroll-behavior: smooth;
+
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 #header {
@@ -60,7 +62,7 @@ html {
 #header .nav .drow-down-icon {
   display: inline-block;
   font-size: 20px;
-  line-height: 46px;
+  line-height: 44px;
   padding: 0 10px;
 }
 #header #search-btn {
@@ -75,9 +77,17 @@ html {
   line-height: 46px;
   font-size: 18px;
 }
+#header .mobile-menu-btn:hover,
 #header #search-btn:hover {
   background-color: red;
   color: white;
+}
+#header .mobile-menu-btn {
+  display: none;
+  color: white;
+  float: right;
+  line-height: 46px;
+  padding: 0 21px;
 }
 #slider {
   position: relative;
@@ -269,6 +279,7 @@ html {
   font-size: 15px;
 }
 .row {
+  /* margin-top: 10px; */
   margin-left: -8px;
   margin-right: -8px;
 }
@@ -283,7 +294,7 @@ html {
   padding-left: 8px;
   padding-right: 8px;
 }
-.form-comtrol {
+.form-control {
   padding: 10px;
 }
 .mt-8 {
@@ -327,4 +338,127 @@ html {
 }
 .copy-right a {
   color: #757575;
+}
+
+.modal {
+  z-index: 100;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  justify-content: center;
+  align-items: center;
+}
+.modal-container {
+  overflow: hidden;
+  border-radius: 10px;
+
+  background: #fff;
+  width: 900px;
+  min-height: 200px;
+  max-width: calc(100% - 32px);
+  position: relative;
+  animation: modalFadeIn ease 0.4s;
+}
+.modal .modal-header {
+  background: #009688;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #ffff;
+}
+.modal .modal-icon-bag {
+  margin-right: 6px;
+}
+.modal .modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 12px;
+  cursor: pointer;
+  opacity: 0.9;
+  cursor: pointer;
+  background: red;
+  color: #fff;
+}
+.modal .modal-close:hover {
+  background: #cccc;
+}
+.modal-body {
+  padding: 16px;
+}
+.modal-label {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+.modal-input {
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+.modal-footer {
+  padding: 16px;
+  text-align: right;
+}
+#buy-tickets:hover {
+  opacity: 0.8;
+}
+#buy-tickets {
+  width: 100%;
+  background: #009688;
+  color: white;
+  font-size: 15px;
+  padding: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btn-closed {
+  width: 84px;
+  height: 38px;
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: #f44336;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+}
+.btn-closed:hover {
+  opacity: 0.8;
+}
+.contact-content {
+  margin-top: 48px;
+  width: 100%;
+}
+.contact-info {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.contact-info i[class*="fa-"] {
+  display: inline-block;
+  width: 30px;
+}
+.contact-form {
+  font-size: 15px;
+}
+.contact-form .form-control {
+  padding: 10px;
+  border: 1 solid #ccc;
+  width: 100%;
+}
+#map .img-bottom {
+  width: 100%;
+}
+.modal.open {
+  display: flex;
 }
